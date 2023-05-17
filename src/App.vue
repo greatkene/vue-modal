@@ -3,7 +3,11 @@
   <div class="container">
     <h1>{{ title }}</h1>
     <div v-if="showModal">
-      <Modal :header="header" :content="content" theme="sale" @close="toggleModal" />
+      <Modal theme="sale">
+        <h1>{{ header }}</h1>
+        <p>{{ content }}</p>
+        <button @click="toggleModal">Close Modal</button>
+      </Modal>
     </div>
     <button @click="toggleModal">Open Modal</button>
   </div>
